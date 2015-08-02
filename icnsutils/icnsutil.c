@@ -2,7 +2,7 @@
  * icnsutil
  *
  * Copyright (C) 2008 Julien BLACHE <jb@jblache.org>
- * Copyright (C) 2012 Mathew Eis <mathew@eisbox.net>
+ * Copyright (C) 2015 Mathew Eis <mathew@eisbox.net>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -480,7 +480,7 @@ int usage(void)
 int iconset_to_icns(char *srcfile, char *dstfile)
 {
 	FILE *icnsfile;
-	icns_family_t	*iconFamily;
+	icns_family_t *iconFamily = NULL;
 	char *pngfile = NULL;
 	char *outfile = NULL;
 	int	srclen = strlen(srcfile);
