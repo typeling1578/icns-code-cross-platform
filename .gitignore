@@ -33,5 +33,6 @@ libicns.pc
 libicns.spec
 stamp-h1
 icns2png
+icnsutil
 icontainer2icns
 png2icns
