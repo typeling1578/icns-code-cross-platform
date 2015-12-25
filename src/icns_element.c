@@ -536,7 +536,7 @@ int icns_update_element_with_image_or_mask(icns_image_t *imageIn,icns_bool_t isM
 
 	if(imageIn->imagePixelDepth != (iconInfo.iconBitDepth/iconInfo.iconChannels))
 	{
-		icns_print_err("icns_update_element_with_image_or_mask: libicns does't support bit depth conversion yet.\n");
+		icns_print_err("icns_update_element_with_image_or_mask: libicns doesn't support bit depth conversion yet.\n");
 		return ICNS_STATUS_INVALID_DATA;
 	}
 

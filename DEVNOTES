@@ -40,7 +40,7 @@ libicns.
 Jasper vs OpenJPEG
 
 Jasper and OpenJPEG are both excellent JPEG2000 decoders, however, their
-presence on various linux distributions is at present uncertain.
+presence on various Linux distributions is at present uncertain.
 
 Jasper (libjasper)
 As of 1.9001 it may 'crash' unless the library is built with -DNDEBUG.

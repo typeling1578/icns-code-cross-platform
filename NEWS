@@ -68,7 +68,7 @@ Release 0.5.7  (06/10/2008)
 # Sourceforge SVN rev 118 - 134
 # libicns version 2.0.1 (per libtool) - (NOTE: should have changed to 2.2.1)
 - Updated to use autoconf 2.61, automake 1.10
-- Added debain packaging to SVN tree (NOTE: Maintainer use only!)
+- Added Debian packaging to SVN tree (NOTE: Maintainer use only!)
 - Moved libicns/ to src/ for more conventional structure
 - Added png2icns utility
 - Added confgure check for libjasper and/or libopenjpeg
