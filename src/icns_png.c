@@ -20,13 +20,14 @@ Boston, MA 02110-1301, USA.
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdint.h>
+#include <stddef.h>
 #include <string.h>
 
 #include "icns.h"
 #include "icns_internals.h"
 
 #include <png.h>
+#include <setjmp.h>
 
 typedef struct icns_png_io_ref {
 	void*	data;

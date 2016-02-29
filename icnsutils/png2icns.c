@@ -22,10 +22,13 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdint.h>
+#include <stdlib.h>
+#include <unistd.h>
 
 #include <errno.h>
 
 #include <png.h>
+#include <setjmp.h>
 #include <icns.h>
 
 #define	FALSE	0

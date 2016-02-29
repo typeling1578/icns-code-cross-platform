@@ -18,14 +18,10 @@ Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
 Boston, MA 02110-1301, USA.
 */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <stdint.h>
-#include <string.h>
-
-#include "icns.h"
-#include "icns_internals.h"
 #ifdef ICNS_DEBUG
+
+#include <stdio.h>
+
 void bin_print_byte(int x)
 {
    int n;

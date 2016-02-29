@@ -18,7 +18,6 @@ Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
 Boston, MA 02110-1301, USA.
 */
 #include <stdio.h>
-#include <string.h>
 
 // --> find icns data[i]
 // --> data[i-9] - data[i-1] = "[######]" (id)

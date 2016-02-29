@@ -22,12 +22,14 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdint.h>
+#include <stdlib.h>
 
 #include <errno.h>
 
 #include <sys/stat.h>
 
 #include <png.h>
+#include <setjmp.h>
 #include <icns.h>
 
 #define DEBUG_ICNSUTIL 0

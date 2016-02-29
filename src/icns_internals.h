@@ -20,11 +20,6 @@ Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
 Boston, MA 02110-1301, USA.
 */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <stdint.h>
-#include <string.h>
-
 #include "icns.h"
 
 #include "config.h"
@@ -150,6 +145,7 @@ memory alignment. So, we try to work around this here.
  #define ICNS_READ_UNALIGNED(val, addr, size)        icns_memcpy(&(val), (addr), size)
  #define ICNS_WRITE_UNALIGNED(addr, val, size)       icns_memcpy((addr), &(val), size)
 #else
+ #include <string.h>
  #define ICNS_READ_UNALIGNED(val, addr, size)        memcpy(&(val), (addr), size)
  #define ICNS_WRITE_UNALIGNED(addr, val, size)       memcpy((addr), &(val), size)
 #endif

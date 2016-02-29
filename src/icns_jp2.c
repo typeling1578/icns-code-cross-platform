@@ -21,9 +21,13 @@ Boston, MA 02110-1301, USA.
 */
 
 #include <stdio.h>
+#ifdef ICNS_DEBUG
 #include <stdlib.h>
+#endif
 #include <stdint.h>
+#ifdef ICNS_OPENJPEG
 #include <string.h>
+#endif
 
 #include "icns.h"
 #include "icns_internals.h"

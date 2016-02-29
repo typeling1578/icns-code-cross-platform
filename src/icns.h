@@ -20,13 +20,11 @@ Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
 Boston, MA 02110-1301, USA.
 */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <stdint.h>
-#include <string.h>
-
 #ifndef _ICNS_H_
 #define	_ICNS_H_
+
+#include <stdio.h>
+#include <stdint.h>
 
 /* basic data types */
 typedef uint8_t         icns_bool_t;

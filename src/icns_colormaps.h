@@ -23,6 +23,8 @@ Boston, MA 02110-1301, USA.
 #ifndef _COLORMAPS_H_
 #define	_COLORMAPS_H_	1
 
+#include "icns.h"
+
 typedef struct icns_colormap_rgb_t
 {
   icns_byte_t r;
