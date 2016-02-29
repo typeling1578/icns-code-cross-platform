@@ -27,7 +27,7 @@ This package include the following libraries and utilities:
 2) icns2png - A utility for converting icns files into png images
 3) icontainer2icns - A utility for extracting icns files from icontainer packs
 
-You should be able to get the latest version at http://sf.net/projects/icns
+You should be able to get the latest version at https://sf.net/p/icns
 
 ===============================================================================
 libicns is a library for manipulation of the Mac OS icns resource format, also
