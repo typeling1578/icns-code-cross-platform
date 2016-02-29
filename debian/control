@@ -5,7 +5,7 @@ Uploaders: Paul Wise <pabs@debian.org>
 Build-Depends:
  debhelper (>= 9),
  dh-autoreconf,
- libjasper-dev,
+ libopenjpeg-dev,
  libjpeg-dev,
  libpng-dev
 Standards-Version: 3.9.6
