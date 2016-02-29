@@ -132,8 +132,7 @@ appropriate API reference for information on data returned by a function. For
 more information see
 Network-Related Data.
 -------------------------------------------------------------------------------
-Source: http://developer.apple.com/documentation/MacOSX/Conceptual/
-universal_binary/universal_binary_byte_swap/chapter_4_section_3.html
+Source: https://developer.apple.com/documentation/MacOSX/Conceptual/universal_binary/universal_binary_byte_swap/chapter_4_section_3.html
 
 Since Apple's own Developer Documentation indicates icns is ALWAYS big-endian
 libicns assumes that all data will be in the big endian format, and therefore
