@@ -1080,7 +1080,7 @@ exception:
 int icns_read_macbinary_resource_fork(icns_size_t dataSize,icns_byte_t *dataPtr,icns_type_t *dataTypeOut, icns_type_t *dataCreatorOut,icns_size_t *parsedResSizeOut,icns_byte_t **parsedResDataOut)
 {
 	// This code is based off information from the MacBinaryIII specification at
-	// http://web.archive.org/web/*/www.lazerware.com/formats/macbinary/macbinary_iii.html
+	// https://web.archive.org/web/www.lazerware.com/formats/macbinary/macbinary_iii.html
 
 	int		error = ICNS_STATUS_OK;
 	icns_type_t	dataType = ICNS_NULL_TYPE;
