@@ -26,7 +26,7 @@ Extract icns files from an icontainer archive
 iContainer format is some kind binary object tree
 It is likely encoded by the Mac OS X NSArchiver
 which, in turn, uses Objective-C type encodings; see
-http://gcc.gnu.org/onlinedocs/gcc-3.0.4/gcc_7.html
+https://gcc.gnu.org/onlinedocs/gcc/Type-encoding.html
 
 We are after the blocks of NSData containing the icns icons
 
