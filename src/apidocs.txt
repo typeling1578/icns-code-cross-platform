@@ -28,7 +28,7 @@
         iv. Updating existing elements with image data
      * Part V: Manipulating images of the icon family and icon elements
          i. Fast retrival of a complete icon image from an icon family
-        ii. Retriving a image or mask from an icon element
+        ii. Retrieving a image or mask from an icon element
         iii. Initializing an empty image - ready for data
         iv. Freeing the memory allocated by an icon image
      * Part VI: Decoding and encoding image data for certain formats
@@ -282,7 +282,7 @@ static const icns_type_t  ICNS_NULL_TYPE                 = {{ 0 , 0 , 0 , 0 }};
 
    int icns_get_image32_with_mask_from_family(icns_family_t
    *iconFamily,icns_type_t sourceType,icns_image_t *imageOut);
-   Retriving a image or mask from an icon element
+   Retrieving a image or mask from an icon element
 
    int icns_get_image_from_element(icns_element_t
    *iconElement,icns_image_t *imageOut);
