@@ -65,7 +65,7 @@ There are two versions in use:
 Library interface versioning follows GNU libtool versioning to the letter
 1:0:0 (CURRENT:REVISION:AGE)
 See GNU libtool documentation for more information:
-http://www.gnu.org/software/libtool/manual.html#Libtool-versioning
+https://www.gnu.org/software/libtool/manual/libtool.html#Libtool-versioning
 
 Please take the time to understand this before making changes to libicns
 -------------------------------------------------------------------------------
