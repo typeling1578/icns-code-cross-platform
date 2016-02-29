@@ -240,9 +240,9 @@ static int add_png_to_family(icns_family_t **iconFamily, char *pngname)
 
 		return FALSE;
 	}
-	
+
 	icns_set_print_errors(1);
-	
+
 	if( (iconType != ICNS_1024x1024_32BIT_ARGB_DATA) && (iconType != ICNS_512x512_32BIT_ARGB_DATA) && (iconType != ICNS_256x256_32BIT_ARGB_DATA) )
 	{
 		printf("Using icns type '%s', mask '%s' for '%s'\n", iconStr, maskStr, pngname);
@@ -251,9 +251,9 @@ static int add_png_to_family(icns_family_t **iconFamily, char *pngname)
 	{
 		printf("Using icns type '%s' (ARGB) for '%s'\n", iconStr, pngname);
 	}
-	
+
 	icnsErr = icns_new_element_from_image(&icnsImage, iconType, &iconElement);
-	
+
 	if (iconElement != NULL)
 	{
 		if (icnsErr == ICNS_STATUS_OK)
@@ -269,7 +269,7 @@ static int add_png_to_family(icns_family_t **iconFamily, char *pngname)
 
 		iconDataOffset = 0;
 		maskDataOffset = 0;
-	
+
 		while ((iconDataOffset < icnsImage.imageDataSize) && (maskDataOffset < icnsMask.imageDataSize))
 		{
 			icnsMask.imageData[maskDataOffset] = icnsImage.imageData[iconDataOffset+3];
@@ -287,7 +287,7 @@ static int add_png_to_family(icns_family_t **iconFamily, char *pngname)
 			}
 			free(maskElement);
 		}
-		
+
 		icns_free_image(&icnsMask);
 	}
 
@@ -335,7 +335,7 @@ int main(int argc, char **argv)
 	{
 		fprintf(stderr, "Failed to write icns file\n");
 		fclose(icnsfile);
-	
+
 		exit(1);
 	}
 
