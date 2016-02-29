@@ -84,8 +84,11 @@ libicns (and icns2png) can decode all five storage formats
 The .icns files are much easier to deal with, since they are in a format that
 can be easily accesed from Linux/UNIX/Windows.
 
-You can however access the icons from the resource files. OS X Icons like
-those from http://interfacelift.com/icons-mac/ are compressed in .sit files.
+You can however access the icons from the resource files. MacOS X icons
+like older icons from IterfaceLIFT are compressed in .sit files.
+
+ https://interfacelift.com/icons/downloads/date/mac_os_x/
+
 These files can be uncompressed using Aladdin Stuffit Expander for Linux,
 which can be obtained from http://www.stuffit.com/unix/index.html
 
