@@ -89,23 +89,21 @@ like older icons from IterfaceLIFT are compressed in .sit files.
 
  https://interfacelift.com/icons/downloads/date/mac_os_x/
 
-These files can be uncompressed using Aladdin Stuffit Expander for Linux,
-which can be obtained from http://www.stuffit.com/unix/index.html
+These StuffIt .sit files can be uncompressed using The Unarchiver (unar):
 
-When unstuffing, be sure to use a command similar to the following:
+ https://unarchiver.c3.cx/
 
-unstuff --text=auto --macbinary=auto --eol=unix icons.hqx.sit
+Using the unar command-line looks like this:
 
-This will help ensure that the resource forks are uncompressed into
-MacBinary files, so that icns2png can read them.
+ unar some-icon-archive.sit
 
-If there are resource forks in the files, when stuffit decompresses them,
+If there are resource forks in the files, when unar decompresses them,
 it will create two files from the one mac file. For example, if the mac
 file was named "Gnu", the resulting decomressed files will be
-"Gnu", and "Gnu_1". The "Snowflake_1" file is the resource
+"Gnu", and "Gnu.rsrc". The "Snowflake.rsrc" file is the resource
 fork. This is the file you will want to extract the icon from. The file
 "Gnu" does not contain any icon data. If, however, there is no
-"Gnu_1", then the file may be in the .icns format, and you will
+"Gnu.rsrc", then the file may be in the .icns format, and you will
 extract the icon from "Gnu" - resulting in a file "Gnu.png"
 
 It is really fairly simple, once you get the hang of it - you will also
