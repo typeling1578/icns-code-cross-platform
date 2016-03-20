@@ -24,13 +24,14 @@ Boston, MA 02110-1301, USA.
 #include <stdio.h>
 #endif
 #include <stdint.h>
+
+#include "icns.h"
+#include "icns_internals.h"
+
 #if defined(ICNS_JASPER) || defined(ICNS_OPENJPEG)
 #include <stdlib.h>
 #include <string.h>
 #endif
-
-#include "icns.h"
-#include "icns_internals.h"
 
 #ifdef ICNS_JASPER
 #include <jasper/jasper.h>
