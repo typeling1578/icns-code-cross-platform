@@ -1,6 +1,6 @@
 #         -*- Autoconf -*-
 # Process this file with autoconf to produce a configure script.
-AC_PREREQ([2.59])
+AC_PREREQ([2.69])
 AC_INIT([libicns],[0.8.1],[https://sourceforge.net/p/icns/bugs/])
 AM_INIT_AUTOMAKE
 AC_CONFIG_SRCDIR([src/icns.h])
@@ -20,12 +20,12 @@ fi
 
 # Stuff for the config.h.in file
 AC_CONFIG_HEADERS(config.h)
-AC_GNU_SOURCE
+AC_USE_SYSTEM_EXTENSIONS
 
 # Checks for programs.
 AC_PROG_CC
 AC_PROG_LN_S
-AC_PROG_LIBTOOL
+LT_INIT
 
 # Checks for header files.
 AC_HEADER_STDC
