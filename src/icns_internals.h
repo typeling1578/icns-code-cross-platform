@@ -27,6 +27,28 @@ Boston, MA 02110-1301, USA.
 #ifndef _ICNS_INTERNALS_H_
 #define	_ICNS_INTERNALS_H_
 
+/*
+These macros will work on systems that support unaligned
+accesses, as well as those that don't support it.
+Unfortunately, gcc doesn't support unaligned access well
+with memcpy on some architectures due to a combination of
+memcpy being inlined during the optimization process and
+memory alignment. So, we try to work around this here.
+*/
+
+// If the autotools didn't tell us, try and make a good guess
+#ifndef HAVE_UNALIGNED_MEMCPY
+ #if defined(__GNUC__) && (defined(__arm__) || defined(__thumb__) || defined(__sparc__))
+  #define HAVE_UNALIGNED_MEMCPY 0
+ #else
+  #define HAVE_UNALIGNED_MEMCPY 1
+ #endif
+#endif
+
+#if HAVE_UNALIGNED_MEMCPY == 1
+  #include <string.h>
+#endif
+
 /*  Compile-time variables   */
 /*  These should really be set from the Makefile */
 
@@ -121,31 +143,12 @@ static inline icns_argb_t ICNS_RGBA_TO_ARGB(icns_rgba_t pxin) {
 	return pxout;
 }
 
-/*
-These macros will work on systems that support unaligned
-accesses, as well as those that don't support it.
-Unfortunately, gcc doesn't support unaligned access well
-with memcpy on some architectures due to a combination of
-memcpy being inlined during the optimization process and
-memory alignment. So, we try to work around this here.
-*/
-
-// If the autotools didn't tell us, try and make a good guess
-#ifndef HAVE_UNALIGNED_MEMCPY
- #if defined(__GNUC__) && (defined(__arm__) || defined(__thumb__) || defined(__sparc__))
-  #define HAVE_UNALIGNED_MEMCPY 0
- #else
-  #define HAVE_UNALIGNED_MEMCPY 1
- #endif
-#endif
-
 // Set up the macros
 #if HAVE_UNALIGNED_MEMCPY == 0
  __attribute__ ((noinline)) void *icns_memcpy( void *dst, const void *src, size_t num );
  #define ICNS_READ_UNALIGNED(val, addr, size)        icns_memcpy(&(val), (addr), size)
  #define ICNS_WRITE_UNALIGNED(addr, val, size)       icns_memcpy((addr), &(val), size)
 #else
- #include <string.h>
  #define ICNS_READ_UNALIGNED(val, addr, size)        memcpy(&(val), (addr), size)
  #define ICNS_WRITE_UNALIGNED(addr, val, size)       memcpy((addr), &(val), size)
 #endif
