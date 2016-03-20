@@ -25,7 +25,7 @@ Boston, MA 02110-1301, USA.
 #include <stdlib.h>
 #endif
 #include <stdint.h>
-#ifdef ICNS_OPENJPEG
+#if defined(ICNS_JASPER) || defined(ICNS_OPENJPEG)
 #include <string.h>
 #endif
 
