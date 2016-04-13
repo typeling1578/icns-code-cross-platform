@@ -11,7 +11,7 @@ Build-Depends:
 Standards-Version: 3.9.6
 Section: libs
 Homepage: http://icns.sourceforge.net/
-Vcs-Svn: https://svn.code.sf.net/p/icns/code/
+Vcs-Git: git://git.code.sf.net/p/icns/code/
 Vcs-Browser: https://sourceforge.net/p/icns/code/
 
 Package: libicns1

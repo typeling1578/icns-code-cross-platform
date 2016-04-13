@@ -1,11 +1,4 @@
-# Please only change this file from SVN:
-# svn co https://svn.code.sf.net/p/icns/code icns-svn
-# $EDITOR icns-svn/.gitignore
-# svn propset -R svn:ignore -F icns-svn/.gitignore icns-svn
-# svn commit icns-svn
 INSTALL
-.svnignore
-.gitignore
 Makefile
 Makefile.in
 autom4te.cache
