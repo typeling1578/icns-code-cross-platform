@@ -20,23 +20,14 @@ rpm: @PACKAGE@.spec
 distclean-local:
 	-rm -f @PACKAGE@.spec
 
+maintainer-clean-local:
+	-rm -rf build-aux m4
+
 MAINTAINERCLEANFILES = \
-  m4/lt~obsolete.m4 \
-  m4/ltoptions.m4 \
-  m4/ltversion.m4 \
-  m4/ltsugar.m4 \
-  m4/libtool.m4 \
   INSTALL \
-  config.h.in \
-  config.h.in~ \
+  config.h.in* \
   aclocal.m4 \
-  config.guess \
-  config.sub \
   configure \
-  depcomp \
-  install-sh \
-  ltmain.sh \
-  missing \
   Makefile.in
 
 dist-hook:
