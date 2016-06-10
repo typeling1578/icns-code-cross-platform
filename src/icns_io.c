@@ -806,7 +806,7 @@ int icns_parse_family_data(icns_size_t dataSize,icns_byte_t *dataPtr,icns_family
 				goto exception;
 			}
 
-			// 'Fix' the value's endianness for working with with them
+			// 'Fix' the value's endianness for working with them
 			ICNS_WRITE_UNALIGNED( dataPtr+dataOffset, elementType, sizeof(icns_type_t));
 			ICNS_WRITE_UNALIGNED( dataPtr+dataOffset+4, elementSize, sizeof(icns_size_t));
 

@@ -801,7 +801,7 @@ icns_bool_t icns_types_equal(icns_type_t typeA,icns_type_t typeB)
 		return 0;
 }
 
-// This is is largely for conveniance and readability
+// This is largely for conveniance and readability
 icns_bool_t icns_types_not_equal(icns_type_t typeA,icns_type_t typeB)
 {
 	if(memcmp(&typeA, &typeB, sizeof(icns_type_t)) != 0)
