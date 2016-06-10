@@ -12,8 +12,7 @@ EXTRA_DIST = \
   COPYING.LGPL-2 \
   COPYING.LGPL-2.1 \
   README.install \
-  DEVNOTES \
-  MANIFEST.sources
+  DEVNOTES
 
 rpm: @PACKAGE@.spec
 	fakeroot rpm --clean -bb @PACKAGE@.spec
