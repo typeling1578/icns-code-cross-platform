@@ -10,6 +10,7 @@ config.status
 config.guess
 config.sub
 configure
+ar-lib
 depcomp
 install-sh
 missing
