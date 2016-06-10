@@ -181,7 +181,7 @@ int icns_encode_rle24_data(icns_size_t dataSizeIn, icns_byte_t *dataPtrIn,icns_s
 	}
 
 	// Assumptions of what icns rle data is all about:
-	// A) Each channel is encoded indepenent of the next.
+	// A) Each channel is encoded independent of the next.
 	// B) An encoded channel looks like this:
 	//    0xRL 0xCV 0xCV 0xRL 0xCV - RL is run-length and CV is color value.
 	// C) There are two types of runs
