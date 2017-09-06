@@ -39,6 +39,7 @@ int icns_decode_rle24_data(icns_size_t rawDataSize, icns_byte_t *rawDataPtr,icns
 	icns_uint32_t	i = 0;
 	icns_byte_t	*destIconData = NULL;	// Decompressed Raw Icon Data
 	icns_uint32_t	destIconDataSize = 0;
+	int             status = ICNS_STATUS_OK;
 
 	if(rawDataPtr == NULL)
 	{
@@ -128,6 +129,12 @@ int icns_decode_rle24_data(icns_size_t rawDataSize, icns_byte_t *rawDataPtr,icns
 			{
 				// Top bit is set - run of one value to follow
 				runLength = (0xFF & rawDataPtr[dataOffset++]) - 125; // 3 <= len <= 130
+				// Prevent a buffer overrun
+				if( dataOffset >= rawDataSize )
+				{
+					status = ICNS_STATUS_INVALID_DATA;
+					break;
+				}
 				// Set the value to the color shifted to the correct bit offset
 				colorValue = rawDataPtr[dataOffset++];
 
@@ -142,7 +149,7 @@ int icns_decode_rle24_data(icns_size_t rawDataSize, icns_byte_t *rawDataPtr,icns
 	*dataSizeOut = destIconDataSize;
 	*dataPtrOut = destIconData;
 
-	return ICNS_STATUS_OK;
+	return status;
 }
 
 //***************************** icns_encode_rle24_data *******************************************//
