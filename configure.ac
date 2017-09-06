@@ -181,10 +181,10 @@ AC_CHECK_HEADERS([jasper/jasper.h])
 AC_DEFINE([ICNS_JASPER],[1],[We have Jasper])
 ], [
   PKG_CHECK_MODULES([JP2000], [libopenjp2], [
-  AC_DEFINE([ICNS_OPENJPEG],[2],[We have OpenJPEG 2.x])
+  AC_DEFINE([ICNS_OPENJPEG],[2],[We have OpenJPEG 2])
   ], [
     PKG_CHECK_MODULES([JP2000], [libopenjpeg1], [
-    AC_DEFINE([ICNS_OPENJPEG],[1],[We have OpenJPEG])
+    AC_DEFINE([ICNS_OPENJPEG],[1],[We have OpenJPEG 1])
     ], [
       AC_MSG_WARN([libopenjpeg or libjasper jp2000 codec libraries not found])
       AC_MSG_WARN([libicns will be built without 256x256 and 512x512 support])
