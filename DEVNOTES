@@ -26,8 +26,11 @@ To enable debugging messages
 To enable libjasper support for 256x256 and 512x512 icons
 #define	ICNS_JASPER
 
-To enable libopenjpeg support for 256x256 and 512x512 icons
-#define	ICNS_OPENJPEG
+To enable libopenjpeg 1 support for 256x256 and 512x512 icons
+#define	ICNS_OPENJPEG 1
+
+To enable libopenjpeg 2 support for 256x256 and 512x512 icons
+#define	ICNS_OPENJPEG 2
 ===============================================================================
 Debugging
 
