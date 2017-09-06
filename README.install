@@ -21,6 +21,7 @@ platform and has been tested on PowerPC Linux, x86 Linux, and Mac OS X (UNIX)
 
 libicns requires the following external dependencies:
 
+pkg-config
 libpng
 Jasper or OpenJPEG
 

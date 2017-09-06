@@ -180,9 +180,7 @@ AC_SUBST(JP2000_LIBS, "-ljasper")
 AC_CHECK_HEADERS([jasper/jasper.h])
 AC_DEFINE([ICNS_JASPER],[1],[We have Jasper])
 ], [
-  AC_CHECK_LIB(openjp2, opj_setup_decoder, [
-  AC_SUBST(JP2000_LIBS, "-lopenjp2")
-  AC_CHECK_HEADERS([openjpeg.h])
+  PKG_CHECK_MODULES([JP2000], [libopenjp2], [
   AC_DEFINE([ICNS_OPENJPEG],[2],[We have OpenJPEG 2.x])
   ], [
     AC_CHECK_LIB(openjpeg, opj_setup_decoder, [
