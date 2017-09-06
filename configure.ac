@@ -183,9 +183,7 @@ AC_DEFINE([ICNS_JASPER],[1],[We have Jasper])
   PKG_CHECK_MODULES([JP2000], [libopenjp2], [
   AC_DEFINE([ICNS_OPENJPEG],[2],[We have OpenJPEG 2.x])
   ], [
-    AC_CHECK_LIB(openjpeg, opj_setup_decoder, [
-    AC_SUBST(JP2000_LIBS, "-lopenjpeg")
-    AC_CHECK_HEADERS([openjpeg.h])
+    PKG_CHECK_MODULES([JP2000], [libopenjpeg1], [
     AC_DEFINE([ICNS_OPENJPEG],[1],[We have OpenJPEG])
     ], [
       AC_MSG_WARN([libopenjpeg or libjasper jp2000 codec libraries not found])
