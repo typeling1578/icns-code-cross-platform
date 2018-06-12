@@ -266,7 +266,7 @@ int icns_jas_jp2_to_image(icns_size_t dataSize, icns_byte_t *dataPtr, icns_image
 		if(depth > 8) {
 			adjust[c] = depth - 8;
 			#ifdef ICNS_DEBUG
-			printf("BMP CONVERSION: Will be trucating component %d (%d bits) by %d bits to 8 bits.\n",c,depth,adjust[c]);
+			printf("BMP CONVERSION: Will be truncating component %d (%d bits) by %d bits to 8 bits.\n",c,depth,adjust[c]);
 			#endif
 		} else {
 			adjust[c] = 0;
@@ -277,7 +277,7 @@ int icns_jas_jp2_to_image(icns_size_t dataSize, icns_byte_t *dataPtr, icns_image
 	{
 		if((bufs[c] = jas_matrix_create(1, imageWidth)) == NULL)
 		{
-			icns_print_err("icns_jas_jp2_to_image: Unable to create image matix! (No memory)\n");
+			icns_print_err("icns_jas_jp2_to_image: Unable to create image matrix! (No memory)\n");
 			error = ICNS_STATUS_NO_MEMORY;
 			goto exception;
 		}
@@ -428,7 +428,7 @@ int icns_jas_image_to_jp2(icns_image_t *image, icns_size_t *dataSizeOut, icns_by
 	{
 		if((bufs[c] = jas_matrix_create(height, width)) == NULL)
 		{
-			icns_print_err("icns_jas_image_to_jp2: Unable to create image matix! (No memory)\n");
+			icns_print_err("icns_jas_image_to_jp2: Unable to create image matrix! (No memory)\n");
 			error = ICNS_STATUS_NO_MEMORY;
 			goto exception;
 		}
@@ -813,7 +813,7 @@ int icns_opj_to_image(opj_image_t *opjImg, icns_image_t *iconImg)
 		if(depth > 8) {
 			adjust[c] = depth - 8;
 			#ifdef ICNS_DEBUG
-			printf("BMP CONVERSION: Will be trucating component %d (%d bits) by %d bits to 8 bits.\n",c,depth,adjust[c]);
+			printf("BMP CONVERSION: Will be truncating component %d (%d bits) by %d bits to 8 bits.\n",c,depth,adjust[c]);
 			#endif
 		} else {
 			adjust[c] = 0;

@@ -55,7 +55,7 @@ memory alignment. So, we try to work around this here.
 // Enable debugging messages?
 // #define	ICNS_DEBUG	1
 
-// Enable supprt for 256x256, 512x512 and 1024x1024 icons
+// Enable support for 256x256, 512x512 and 1024x1024 icons
 // Use either Jasper or OpenJPEG, but not both
 // #define	ICNS_JASPER
 // #define	ICNS_OPENJPEG

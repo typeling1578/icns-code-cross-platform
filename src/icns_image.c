@@ -399,7 +399,7 @@ int icns_get_image_from_element(icns_element_t *iconElement,icns_image_t *imageO
 	#if ICNS_DEBUG
 	{
 		char typeStr[5];
-		printf("Retreiving image from icon element...\n");
+		printf("Retrieving image from icon element...\n");
 		printf("  type is: '%s'\n",icns_type_str(elementType,typeStr));
 		printf("  size is: %d\n",(int)elementSize);
 	}
@@ -576,7 +576,7 @@ int icns_get_mask_from_element(icns_element_t *maskElement,icns_image_t *imageOu
 	#if ICNS_DEBUG
 	{
 		char typeStr[5];
-		printf("Retreiving image from mask element...\n");
+		printf("Retrieving image from mask element...\n");
 		printf("  type is: '%s'\n",icns_type_str(elementType,typeStr));
 		printf("  size is: %d\n",(int)elementSize);
 	}
