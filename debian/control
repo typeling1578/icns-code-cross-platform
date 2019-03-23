@@ -10,7 +10,7 @@ Build-Depends:
  libpng-dev
 Standards-Version: 3.9.6
 Section: libs
-Homepage: http://icns.sourceforge.net/
+Homepage: https://icns.sourceforge.io/
 Vcs-Git: https://git.code.sf.net/p/icns/code/
 Vcs-Browser: https://sourceforge.net/p/icns/code/
 
