@@ -138,6 +138,8 @@ static int read_png(FILE *fp, png_bytepp buffer, int32_t *bpp, int32_t *width, i
 	*height = h;
 	*bpp = bit_depth * 4;
 
+	png_set_interlace_handling(png_ptr);
+
 	png_read_update_info(png_ptr, info);
 
 	rowsize = png_get_rowbytes(png_ptr, info);
