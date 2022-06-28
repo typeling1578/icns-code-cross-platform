@@ -41,6 +41,10 @@
  #define PNG2ICNS_EXPAND_GRAY 1
 #endif
 
+#if (defined(_WIN32) || defined(__WIN32__))
+#define mkdir(A, B) mkdir(A)
+#endif
+
 static const char *iconset_names[] = {
 	"/icon_16x16.png",
 	"/icon_16x16@2x.png",
