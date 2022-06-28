@@ -424,7 +424,7 @@ int ExtractAndDescribeIconFamilyFile(char *filepath)
 	#else
 	// On all other systems, read just the file
 
-	inFile = fopen( filepath, "r" );
+	inFile = fopen( filepath, "rb" );
 
 	if ( inFile == NULL ) {
 		fprintf (stderr, "Unable to open file %s!\n",filepath);
